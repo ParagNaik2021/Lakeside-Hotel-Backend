@@ -29,12 +29,21 @@ public class RoomResponse {
      This enables you to represent binary data (like images) as a string, which can be easily transferred in text-based formats (e.g., JSON) for web-based applications.
      */
 
-    public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes, List<BookingResponse> bookings) {
+ /*   public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes, List<BookingResponse> bookings) {
         this.id = id;
         this.roomType = roomType;
         this.roomPrice = roomPrice;
         this.isBooked = isBooked;
         this.photo = photoBytes !=null? Base64.encodeBase64String (photoBytes):null;
         this.bookings = bookings;
+    }*/
+
+    public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes) {
+        this.id = id;
+        this.roomType = roomType;
+        this.roomPrice = roomPrice;
+        this.isBooked = isBooked;
+        this.photo = photoBytes !=null? Base64.encodeBase64String (photoBytes):null;
+
     }
 }
